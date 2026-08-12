@@ -2,39 +2,64 @@
 
 import { useState } from 'react'
 
-const fields = ['Name', 'Company', 'Email', 'Phone / WhatsApp', 'Country / Region', 'Product Interest', 'Appliance Type', 'Estimated Quantity']
+const fields = [
+  ['name', 'Name'],
+  ['company', 'Company'],
+  ['email', 'Email'],
+  ['phone', 'Phone / WhatsApp'],
+  ['country', 'Country / Region'],
+  ['productInterest', 'Product Interest'],
+  ['applianceType', 'Appliance Type'],
+  ['estimatedQuantity', 'Estimated Quantity'],
+]
 
 export function InquiryForm() {
-  const [submitted, setSubmitted] = useState(false)
+  const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle')
+  const [message, setMessage] = useState('')
 
   return (
     <form
       id="inquiry"
       className="rounded-[2rem] border border-line bg-white p-6 shadow-glow"
-      onSubmit={(event) => {
+      onSubmit={async (event) => {
         event.preventDefault()
-        setSubmitted(true)
+        setStatus('submitting')
+        setMessage('')
+        const response = await fetch('/api/inquiries', { method: 'POST', body: new FormData(event.currentTarget) })
+        const result = await response.json().catch(() => ({}))
+        if (!response.ok) {
+          setStatus('error')
+          setMessage(result.error || 'Submission failed. Please try again.')
+          return
+        }
+        event.currentTarget.reset()
+        setStatus('success')
+        setMessage('Thank you. Your inquiry has been submitted successfully.')
       }}
     >
       <div className="grid gap-4 sm:grid-cols-2">
-        {fields.map((field) => (
-          <label key={field} className="text-sm font-bold text-ink">
-            {field}
-            <input className="mt-2 min-h-12 w-full rounded-2xl border border-line bg-brand-ice px-4 text-ink outline-none focus:border-brand-blue" required={field === 'Name' || field === 'Email'} />
+        {fields.map(([name, label]) => (
+          <label key={name} className="text-sm font-bold text-ink">
+            {label}
+            <input name={name} type={name === 'email' ? 'email' : 'text'} className="mt-2 min-h-12 w-full rounded-2xl border border-line bg-brand-ice px-4 text-ink outline-none focus:border-brand-blue" required={name === 'name' || name === 'email'} />
           </label>
         ))}
       </div>
       <label className="mt-4 block text-sm font-bold text-ink">
         Custom Requirements
-        <textarea className="mt-2 min-h-32 w-full rounded-2xl border border-line bg-brand-ice p-4 text-ink outline-none focus:border-brand-blue" />
+        <textarea name="requirements" className="mt-2 min-h-32 w-full rounded-2xl border border-line bg-brand-ice p-4 text-ink outline-none focus:border-brand-blue" />
+      </label>
+      <label className="mt-4 block text-sm font-bold text-ink">
+        Message
+        <textarea name="message" className="mt-2 min-h-32 w-full rounded-2xl border border-line bg-brand-ice p-4 text-ink outline-none focus:border-brand-blue" required />
       </label>
       <label className="mt-4 block rounded-2xl border border-dashed border-brand-blue/35 bg-brand-ice p-5 text-sm font-semibold text-muted">
         File upload placeholder for drawings, function lists, or appliance specifications
       </label>
-      <button className="mt-6 min-h-12 rounded-full bg-brand-blue px-6 text-sm font-bold text-white" type="submit">
-        Submit Inquiry
+      <button className="mt-6 min-h-12 rounded-full bg-brand-blue px-6 text-sm font-bold text-white disabled:opacity-60" type="submit" disabled={status === 'submitting'}>
+        {status === 'submitting' ? 'Submitting...' : 'Submit Inquiry'}
       </button>
-      {submitted ? <p className="mt-4 rounded-2xl bg-[#e9f8ef] px-4 py-3 text-sm font-semibold text-[#176b3a]">Inquiry received in preview. Final delivery will connect this form to the real inquiry database.</p> : null}
+      {message ? <p className={`mt-4 rounded-2xl px-4 py-3 text-sm font-semibold ${status === 'error' ? 'bg-[#fff1f1] text-[#a31919]' : 'bg-[#e9f8ef] text-[#176b3a]'}`}>{message}</p> : null}
     </form>
   )
 }

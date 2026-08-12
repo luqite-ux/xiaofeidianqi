@@ -23,6 +23,8 @@ const forbiddenCommitments = /\b(warranty|warranties|guarantee|guaranteed|qualit
 const siteData = read('lib/site-data.ts')
 const routes = read('lib/routes.ts')
 const header = read('components/site-header.tsx')
+const inquiryRoute = read('app/api/inquiries/route.ts')
+const inquiryForm = read('components/contact/inquiry-form.tsx')
 
 assert.match(siteData, /XIAOFEIDIANQI/, 'brand name should be present')
 assert.match(siteData, /杭州小飞电器有限公司/, 'Chinese admin display name should be preserved')
@@ -30,6 +32,8 @@ assert.match(siteData, /Smart Control Systems/, 'positioning should target contr
 assert.match(siteData, /label:\s*['"]Home['"]/, 'nav data must include visible Home navigation')
 assert.match(routes, /inquiryPath\s*=\s*['"]\/contact#inquiry['"]/, 'inquiry route should be centralized')
 assert.match(header, /navItems\.map/, 'header must render navigation data')
+assert.match(inquiryRoute, /from\(['"]inquiries['"]\)\.insert/, 'API route must insert into inquiries')
+assert.match(inquiryForm, /fetch\(['"]\/api\/inquiries['"]/, 'form must submit to real inquiry API')
 
 const sourceDirs = ['app', 'components', 'lib'].map((name) => path.join(root, name))
 const files = sourceDirs.flatMap((dir) => walk(dir))
