@@ -8,8 +8,11 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-line/80 bg-white/88 backdrop-blur-xl">
       <div className="mx-auto flex min-h-20 max-w-7xl items-center justify-between gap-5 px-5 sm:px-8">
-        <Link href="/" className="flex items-center gap-3" aria-label="XIAOFEIDIANQI Home">
-          <Image src={siteInfo.logo} alt="XIAOFEIDIANQI logo" width={184} height={58} className="h-12 w-auto object-contain" priority />
+        <Link href="/" className="flex shrink-0 items-center gap-3" aria-label="XIAOFEIDIANQI Home">
+          <span className="flex h-14 w-14 items-center justify-center overflow-hidden rounded-full bg-white shadow-sm ring-1 ring-line sm:h-16 sm:w-16">
+            <Image src={siteInfo.logoMark} alt="" width={64} height={64} className="h-12 w-12 object-contain sm:h-14 sm:w-14" priority />
+          </span>
+          <span className="text-lg font-black tracking-wide text-ink sm:text-xl">{siteInfo.brand}</span>
         </Link>
         <nav className="hidden items-center gap-6 text-sm font-semibold text-ink lg:flex">
           {navItems.map((item) => (

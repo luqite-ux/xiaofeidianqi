@@ -26,7 +26,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl rounded-[2rem] bg-gradient-to-r from-brand-blue via-[#1d83d4] to-brand-red p-10 text-white shadow-glow">
           <h2 className="max-w-3xl text-3xl font-semibold tracking-tight sm:text-4xl">Tell us your appliance type, expected functions, and production requirements.</h2>
           <p className="mt-4 max-w-2xl text-white/85">Our team can review the control logic, hardware needs, and project scope for your next appliance platform.</p>
-          <InquiryCta label="Start an Inquiry" className="mt-8 bg-white text-brand-blue hover:bg-brand-ice" />
+          <InquiryCta label="Start an Inquiry" variant="light" className="mt-8" />
         </div>
       </section>
     </>

@@ -23,9 +23,10 @@ export const siteInfo = {
   description:
     'OEM/ODM electronic control solutions for steam ovens, electric ovens, vacuum cleaners, disinfection cabinets, range hoods, and integrated kitchen appliances.',
   phone: '0571-86382308',
-  email: 'hangzhouxiaofei@126.com',
+  email: 'info@xiaofeielectronics.com',
   address: 'Anjiajiao, Chaijiawu Village, Tangqi Town, Linping District, Hangzhou, China',
   logo: '/images/logo.png',
+  logoMark: '/images/logo-mark.png',
   founded: '2002'
 }
 
