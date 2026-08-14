@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next'
 import { productCategories } from '@/lib/site-data'
 import { productPath } from '@/lib/routes'
 
-const baseUrl = 'https://www.hz-xiaofei.cn'
+const baseUrl = 'https://xiaofeielectronics.com'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = ['', '/about', '/products', '/solutions', '/manufacturing', '/quality', '/faq', '/contact']
