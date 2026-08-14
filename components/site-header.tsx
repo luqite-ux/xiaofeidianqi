@@ -24,7 +24,7 @@ export function SiteHeader() {
         <div className="flex items-center gap-3">
           <Link
             href={inquiryPath}
-            className="hidden min-h-11 items-center rounded-full bg-brand-red px-5 text-sm font-bold text-white transition hover:bg-[#c90010] sm:inline-flex"
+            className="hidden min-h-11 items-center whitespace-nowrap rounded-full bg-brand-red px-5 text-sm font-bold text-white transition hover:bg-[#c90010] xl:inline-flex"
           >
             Request a Control Solution
           </Link>
