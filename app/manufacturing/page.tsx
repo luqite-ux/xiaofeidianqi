@@ -1,6 +1,11 @@
 import { SectionShell } from '@/components/section-shell'
 import { manufacturingFacts, stats, workflow } from '@/lib/site-data'
 
+export const metadata = {
+  title: 'Manufacturing | Control-Board Production Capability',
+  description: 'Review XIAOFEIDIANQI production capability for control-board manufacturing, module assembly, testing, and B2B appliance project delivery.'
+}
+
 export default function ManufacturingPage() {
   return (
     <SectionShell eyebrow="Manufacturing" title="Production capability for appliance control systems" text="A practical manufacturing base supports control-board production, module assembly, functional testing, and project delivery coordination.">

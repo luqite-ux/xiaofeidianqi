@@ -2,6 +2,11 @@ import { InquiryForm } from '@/components/contact/inquiry-form'
 import { SectionShell } from '@/components/section-shell'
 import { siteInfo } from '@/lib/site-data'
 
+export const metadata = {
+  title: 'Contact XIAOFEIDIANQI | Send Control-System Requirements',
+  description: 'Contact XIAOFEIDIANQI to discuss appliance control logic, expected functions, quantity, and technical requirements for OEM/ODM projects.'
+}
+
 export default function ContactPage() {
   return (
     <SectionShell eyebrow="Contact" title="Send your appliance control requirements" text="Share the appliance type, expected functions, estimated quantity, and technical requirements so the team can review your project scope.">

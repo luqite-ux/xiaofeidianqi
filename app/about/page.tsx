@@ -1,6 +1,11 @@
 import { SectionShell } from '@/components/section-shell'
 import { siteInfo } from '@/lib/site-data'
 
+export const metadata = {
+  title: 'About XIAOFEIDIANQI | Appliance Control System Manufacturer',
+  description: 'Learn about Hangzhou Xiaofei Electrical Appliance Co., Ltd. and its electronic control system production for home appliance manufacturers.'
+}
+
 export default function AboutPage() {
   return (
     <SectionShell eyebrow="About Us" title="Focused on smart electronic control since 2002" text="Hangzhou Xiaofei Electrical Appliance Co., Ltd. is an innovative enterprise engaged in smart electronic product R&D, software development, production, and sales.">

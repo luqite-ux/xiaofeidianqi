@@ -7,8 +7,8 @@ export function QualityPreview() {
       <div className="grid gap-8 lg:grid-cols-[.8fr_1.2fr] lg:items-center">
         <div>
           <ShieldCheck className="h-12 w-12 text-brand-blue" />
-          <h3 className="mt-5 text-3xl font-semibold tracking-tight text-ink">Inspection-led confidence for appliance projects.</h3>
-          <p className="mt-4 leading-8 text-muted">Public copy should stay factual: testing, process checks, and agreed technical requirements.</p>
+          <h3 className="mt-5 text-3xl font-semibold tracking-tight text-ink">Inspection records for appliance-control projects.</h3>
+          <p className="mt-4 leading-8 text-muted">Testing and process checks are arranged around confirmed control logic, operating conditions, and agreed technical requirements.</p>
         </div>
         <div className="grid gap-3">
           {qualitySteps.map((step) => (

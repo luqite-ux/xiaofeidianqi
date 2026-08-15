@@ -2,6 +2,11 @@ import { ProductCard } from '@/components/products/product-card'
 import { SectionShell } from '@/components/section-shell'
 import { productCategories } from '@/lib/site-data'
 
+export const metadata = {
+  title: 'Products | Smart Appliance Control Systems',
+  description: 'Explore XIAOFEIDIANQI control-system categories for steam ovens, electric ovens, vacuum cleaners, disinfection cabinets, range hoods, and appliance power modules.'
+}
+
 export default function ProductsPage() {
   return (
     <SectionShell eyebrow="Products" title="Smart appliance control system categories" text="Explore control-system categories designed for OEM/ODM appliance projects and technical inquiry workflows.">

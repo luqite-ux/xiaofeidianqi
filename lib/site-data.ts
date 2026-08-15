@@ -37,6 +37,7 @@ export const navItems = [
   { label: 'Solutions', href: '/solutions' },
   { label: 'Manufacturing', href: '/manufacturing' },
   { label: 'Quality & Testing', href: '/quality' },
+  { label: 'News', href: '/news' },
   { label: 'FAQ', href: '/faq' },
   { label: 'Contact', href: '/contact' }
 ]
@@ -56,10 +57,10 @@ export const productCategories: ProductCategory[] = [
     title: { en: 'Steam Oven Control Systems' },
     eyebrow: 'Integrated cooking control',
     summary: {
-      en: 'Control systems for steam ovens and combi cooking appliances with steam, baking, hot-air, fermentation, cleaning, timing, and protection logic.'
+      en: 'Control systems for steam ovens and combi cooking appliances, covering steam, baking, hot-air circulation, fermentation, cleaning, timing, and protection logic.'
     },
     applications: ['Steam ovens', 'Combi steam ovens', 'Integrated kitchen appliances'],
-    functions: ['Steam mode control', 'Hot-air circulation', 'Steam baking', 'Fermentation', 'Defrosting', 'Heat preservation'],
+    functions: ['Steam mode control', 'Hot-air circulation', 'Steam baking', 'Fermentation', 'Defrosting', 'Heat retention'],
     capabilities: ['Hardware and software coordination', 'Mode logic customization', 'Control panel adaptation', 'Stable production support'],
     icon: Sparkles
   },
@@ -80,10 +81,10 @@ export const productCategories: ProductCategory[] = [
     title: { en: 'Vacuum Cleaner Control Systems' },
     eyebrow: 'Cleaning appliance control',
     summary: {
-      en: 'Control solutions for vacuum cleaners and cleaning appliances, including multi-level suction adjustment, sensing keys, and gesture sliding interaction.'
+      en: 'Control solutions for vacuum cleaners and cleaning appliances, including multi-level suction adjustment, touch-sensing keys, and gesture-based slider interaction.'
     },
     applications: ['Vacuum cleaners', 'Household cleaning appliances', 'Private-label cleaning products'],
-    functions: ['1-6 level adjustment', 'Sensing key control', 'Gesture sliding sensing', 'Motor control logic'],
+    functions: ['1-6 level adjustment', 'Touch-sensing key control', 'Gesture-based slider sensing', 'Motor control logic'],
     capabilities: ['Interface customization', 'Stable hardware/software performance', 'Model-specific control configuration'],
     icon: RadioTower
   },
@@ -92,10 +93,10 @@ export const productCategories: ProductCategory[] = [
     title: { en: 'Disinfection Cabinet Control Systems' },
     eyebrow: 'Sterilization appliance control',
     summary: {
-      en: 'Control systems for disinfection cabinets with ozone, UV, drying, ventilation, layered control, scheduled operation, and safety-protection logic.'
+      en: 'Control systems for disinfection cabinets with ozone, UV, drying, ventilation, independent chamber control, scheduled operation, and protection logic.'
     },
     applications: ['Disinfection cabinets', 'Kitchen sterilization appliances', 'Mother-and-baby appliance lines'],
-    functions: ['Ozone operation control', 'UV operation control', 'Hot-air drying', 'Sterile storage ventilation', 'Layered independent control', 'Child lock', 'Door-open power-off protection'],
+    functions: ['Ozone operation control', 'UV operation control', 'Hot-air drying', 'Ventilated storage', 'Independent chamber control', 'Child lock', 'Door-open power-off protection'],
     capabilities: ['Multiple functional layouts', 'Mass production experience', 'Appliance safety logic adaptation'],
     icon: ShieldCheck
   },
@@ -104,10 +105,10 @@ export const productCategories: ProductCategory[] = [
     title: { en: 'Range Hood Control Systems' },
     eyebrow: 'Kitchen ventilation electronics',
     summary: {
-      en: 'Control panel and electronic control support for range hood products, sensing interaction, fan control logic, and customized appliance interfaces.'
+      en: 'Control-panel and electronic-control support for range hood products, including touch-sensing interaction, fan control logic, and customized appliance interfaces.'
     },
     applications: ['Range hoods', 'Integrated stove systems', 'Kitchen ventilation appliances'],
-    functions: ['Panel input', 'Fan control logic', 'Sensing interaction', 'Mode switching'],
+    functions: ['Panel input', 'Fan control logic', 'Touch-sensing interaction', 'Mode switching'],
     capabilities: ['Control board customization', 'Interface design support', 'OEM/ODM project alignment'],
     icon: Layers3
   },
@@ -134,12 +135,12 @@ export const solutions = [
   },
   {
     title: 'Cleaning Appliance Control',
-    text: 'Multi-level suction, sensing interaction, and motor-control logic for vacuum cleaner projects.',
+    text: 'Multi-level suction, touch-sensing interaction, and motor-control logic for vacuum cleaner projects.',
     icon: RadioTower
   },
   {
     title: 'Sterilization Appliance Control',
-    text: 'Functional control for disinfection cabinets, drying, ventilation, layered operation, and protection logic.',
+    text: 'Functional control for disinfection cabinets, drying, ventilation, independent chamber operation, and protection logic.',
     icon: ShieldCheck
   },
   {

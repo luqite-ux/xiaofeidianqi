@@ -6,6 +6,16 @@ export function generateStaticParams() {
   return productCategories.map((product) => ({ slug: product.slug }))
 }
 
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
+  const product = productCategories.find((item) => item.slug === slug)
+  if (!product) return {}
+  return {
+    title: `${product.title.en} | XIAOFEIDIANQI`,
+    description: product.summary.en
+  }
+}
+
 export default async function ProductDetailPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
   const product = productCategories.find((item) => item.slug === slug)

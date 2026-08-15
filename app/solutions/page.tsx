@@ -1,6 +1,11 @@
 import { SectionShell } from '@/components/section-shell'
 import { solutions } from '@/lib/site-data'
 
+export const metadata = {
+  title: 'Solutions | OEM/ODM Appliance Control Development',
+  description: 'Application-focused electronic control development for kitchen appliances, cleaning appliances, disinfection cabinets, and OEM/ODM control projects.'
+}
+
 export default function SolutionsPage() {
   return (
     <SectionShell eyebrow="Solutions" title="Application-focused control development" text="XIAOFEIDIANQI supports appliance makers with control logic, hardware adaptation, software functions, and production coordination.">

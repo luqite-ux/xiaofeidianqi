@@ -6,3 +6,5 @@ dist/
 .env.local
 .env.*.local
 *.log
+output/
+xiaofei-header-*.png

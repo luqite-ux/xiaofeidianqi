@@ -1,9 +1,14 @@
 import { SectionShell } from '@/components/section-shell'
 import { qualitySteps } from '@/lib/site-data'
 
+export const metadata = {
+  title: 'Quality & Testing | Appliance Control System Inspection',
+  description: 'See the inspection and testing process used for appliance control-system projects, including parameter review, function testing, and outgoing checks.'
+}
+
 export default function QualityPage() {
   return (
-    <SectionShell eyebrow="Quality & Testing" title="Inspection and testing for stable control-system output" text="Quality content stays factual and focused on process checks, test conditions, and agreed technical requirements.">
+    <SectionShell eyebrow="Quality & Testing" title="Inspection and testing for stable control-system output" text="Testing is organized around process checks, operating conditions, and agreed technical requirements for each appliance project.">
       <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-5">
         {qualitySteps.map((step, index) => (
           <article key={step} className="rounded-3xl border border-line bg-white p-6 shadow-sm">

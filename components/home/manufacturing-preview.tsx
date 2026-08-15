@@ -7,7 +7,7 @@ export function ManufacturingPreview() {
       <div className="rounded-[2rem] border border-line bg-gradient-to-br from-white via-brand-ice to-white p-8 shadow-glow">
         <Factory className="h-14 w-14 text-brand-blue" />
         <h3 className="mt-6 text-3xl font-semibold tracking-tight text-ink">Built for stable control-system production.</h3>
-        <p className="mt-4 leading-8 text-muted">From SMT and wave soldering to potting and anti-interference testing, the site should communicate practical production depth instead of retail appliance selling.</p>
+        <p className="mt-4 leading-8 text-muted">From SMT and wave soldering to potting and anti-interference testing, the production process supports practical control-board manufacturing for B2B appliance projects.</p>
       </div>
       <div className="grid gap-4 sm:grid-cols-2">
         {manufacturingFacts.map((fact) => (

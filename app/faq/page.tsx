@@ -1,6 +1,11 @@
 import { SectionShell } from '@/components/section-shell'
 import { faqs } from '@/lib/site-data'
 
+export const metadata = {
+  title: 'FAQ | Appliance Control System Projects',
+  description: 'Answers to common questions about XIAOFEIDIANQI OEM/ODM appliance control systems, samples, MOQ, lead time, and documentation.'
+}
+
 export default function FaqPage() {
   return (
     <SectionShell eyebrow="FAQ" title="Common questions for appliance control projects">
